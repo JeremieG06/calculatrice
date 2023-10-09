@@ -1,0 +1,70 @@
+/* Style de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f0f0; /* Couleur de fond de la page */
+}
+
+/* Style pour le titre */
+h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Style pour le formulaire de la calculatrice */
+form#calculator {
+    display: inline-block;
+    text-align: center;
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Style pour l'affichage de la calculatrice */
+#display {
+    
+    font-size: 24px;
+    padding: 20px;
+    margin-left: 15px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style pour les boutons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: #00a7d0; /* Couleur de fond des boutons */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007f99; /* Couleur de fond au survol des boutons */
+}
+
+/* Style pour le résultat */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#resultat {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00a7d0;
+}
