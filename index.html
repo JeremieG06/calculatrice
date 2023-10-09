@@ -2,55 +2,79 @@
 <html>
 <head>
     <title>Calculatrice JavaScript</title>
+    
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    
     <h1>Calculatrice JavaScript</h1>
+
+    
     <form id="calculator">
+        <!-- Champ de texte pour afficher la saisie et résultats (lecture seule) -->
         <input type="text" id="display" readonly>
         <br>
+
+        <!-- Groupe de boutons pour les chiffres et opérations -->
         <div class="buttons">
+            <!-- Boutons pour les chiffres 6, 7, 8, 9 -->
             <button type="button" onclick="appendToDisplay('6')">6</button>
             <button type="button" onclick="appendToDisplay('7')">7</button>
             <button type="button" onclick="appendToDisplay('8')">8</button>
             <button type="button" onclick="appendToDisplay('9')">9</button>
             <br>
+
+            <!-- Boutons pour les chiffres 3, 4, 5, et l'opération de multiplication (*) -->
             <button type="button" onclick="appendToDisplay('3')">3</button>
             <button type="button" onclick="appendToDisplay('4')">4</button>
             <button type="button" onclick="appendToDisplay('5')">5</button>
             <button type="button" onclick="appendToDisplay('*')">*</button>
             <br>
+
+            <!-- Boutons pour les chiffres 1, 2, et les opérations de division (/) et soustraction (-) -->
             <button type="button" onclick="appendToDisplay('1')">1</button>
             <button type="button" onclick="appendToDisplay('2')">2</button>
             <button type="button" onclick="appendToDisplay('/')">/</button>
             <button type="button" onclick="appendToDisplay('-')">-</button>
             <br>
+
+            <!-- Boutons pour le chiffre 0, le point décimal, le bouton de suppression (C), et l'addition (+) -->
             <button type="button" onclick="appendToDisplay('0')">0</button>
             <button type="button" onclick="appendToDisplay('.')">.</button>
             <button type="button" onclick="clearDisplay()">C</button>
             <button type="button" onclick="appendToDisplay('+')">+</button>
             <br>
+
+            <!-- Bouton pour le calcul du résultat -->
             <button type="button" onclick="calculateResult()">=</button>
         </div>
     </form>
+
+    <!-- Titre pour afficher le résultat -->
     <h2>Résultat :</h2>
+    <!-- Paragraphe pour afficher le résultat calculé -->
     <p id="resultat"></p>
 
     <script>
+        // Fonction pour ajouter la valeur d'un bouton au champ de texte
         function appendToDisplay(value) {
             document.getElementById("display").value += value;
         }
 
+        // Fonction pour effacer le champ de texte
         function clearDisplay() {
             document.getElementById("display").value = "";
         }
 
+        // Fonction pour calculer et afficher le résultat
         function calculateResult() {
             var expression = document.getElementById("display").value;
             var resultat;
 
             try {
+                // Évalue l'expression mathématique dans le champ de texte
                 resultat = eval(expression);
+                // Vérifie si le résultat est un nombre fini
                 if (isNaN(resultat) || !isFinite(resultat)) {
                     throw new Error("Erreur de calcul");
                 }
@@ -58,6 +82,7 @@
                 resultat = "Erreur";
             }
 
+            // Affiche le résultat calculé dans le paragraphe
             document.getElementById("resultat").textContent = "Résultat : " + resultat;
         }
     </script>

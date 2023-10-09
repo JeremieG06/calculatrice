@@ -1,10 +1,10 @@
-/* Style de base pour le corps de la page */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0f0f0; /* Couleur de fond de la page */
+    background-color: #f0f0f0; 
 }
 
 /* Style pour le titre */
@@ -44,7 +44,7 @@ form#calculator {
 button {
     padding: 15px;
     font-size: 20px;
-    background-color: #00a7d0; /* Couleur de fond des boutons */
+    background-color: #00a7d0; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -53,7 +53,7 @@ button {
 }
 
 button:hover {
-    background-color: #007f99; /* Couleur de fond au survol des boutons */
+    background-color: #007f99; 
 }
 
 /* Style pour le résultat */
